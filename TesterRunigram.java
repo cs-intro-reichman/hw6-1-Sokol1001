@@ -33,7 +33,7 @@ public class TesterRunigram {
         if (testName.equals("vertical")) {
             // Testing Runigram.flippedVertically
             System.out.println("Testing Runigram.flippedVertically...");
-            if (testFlipHorizontally()) {
+            if (testFlipVertically()) {
                 System.out.println("PASSED");
             } else {
                 System.out.println("FAILED");
