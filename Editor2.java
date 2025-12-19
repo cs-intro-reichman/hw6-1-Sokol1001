@@ -10,7 +10,18 @@ import java.awt.Color;
 public class Editor2 {
 
 	public static void main (String[] args){
-		//// Replace this comment with your code.
-		//// This function is similar to the main function of Editor1.java			
+		String fileName = args[0];
+		int width = Integer.parseInt(args[1]);
+		int height = Integer.parseInt(args[2]);
+		// Reads the input image and creates a scaled output image
+		Color[][] imageIn = Runigram.read(fileName);	
+		Color[][] imageOut = Runigram.scaled(imageIn, width, height);	
+		// Creates a canvas for the input image, displays it, pauses,
+		// then creates a new canvas for the output image and displays it.
+		Runigram.setCanvas(imageIn);
+		Runigram.display(imageIn);
+		StdDraw.pause(3000); 
+		Runigram.setCanvas(imageOut); // Creates a new canvas with the scaled dimensions
+		Runigram.display(imageOut);							
 	}
 }
